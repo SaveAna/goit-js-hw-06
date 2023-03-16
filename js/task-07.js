@@ -6,3 +6,5 @@ slider.addEventListener('input', onInputChange);
 function onInputChange() {
   text.style.fontSize = `${slider.value}px`;
 }
+
+onInputChange();
