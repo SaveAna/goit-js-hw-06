@@ -5,21 +5,26 @@ form.addEventListener('submit', onFormSubmit);
 function onFormSubmit(event) {
   event.preventDefault();
 
-  const formData = new FormData(event.currentTarget);
+  const email = event.currentTarget.elements.email.value;
+  const password = event.currentTarget.elements.password.value;
 
-  if (formData.get('email') === '') {
+  const formData = {
+    email,
+    password,
+  };
+
+  if (email === '') {
     alert('Enter your email!');
     return;
   }
 
-  if (formData.get('password') === '') {
+  if (password === '') {
     alert('Enter your password!');
     return;
   }
 
-  formData.forEach((value, name) => {
-    console.log(`${name}: ${value}`);
-  });
-
+  console.log(`email: ${email}`);
+  console.log(`password: ${password}`);
+  console.log(formData);
   form.reset();
 }
