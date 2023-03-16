@@ -1,8 +1,8 @@
 const inputField = document.querySelector('#validation-input');
 
-inputField.addEventListener('blur', onFocusLosing);
+inputField.addEventListener('blur', onInputChange);
 
-function onFocusLosing() {
+function onInputChange() {
   if (inputField.value.length === Number(inputField.dataset.length)) {
     inputField.classList.remove('invalid');
     inputField.classList.add('valid');

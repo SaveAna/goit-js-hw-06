@@ -8,6 +8,6 @@
 const slider = document.querySelector('#font-size-control');
 const text = document.querySelector('#text');
 
-slider.addEventListener('input', onChangeSlider);
+slider.addEventListener('input', onInputChange);
 
-function onChangeSlider() {}
+function onInputChange() {}
