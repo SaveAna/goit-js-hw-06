@@ -10,6 +10,7 @@ function getRandomHexColor() {
 }
 
 function onBtnClick() {
-  document.body.style.backgroundColor = getRandomHexColor();
-  colorValue.textContent = getRandomHexColor();
+  const color = getRandomHexColor();
+  document.body.style.backgroundColor = color;
+  colorValue.textContent = color;
 }
