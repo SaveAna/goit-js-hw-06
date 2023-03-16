@@ -4,17 +4,17 @@ const refs = {
   decrementBtn: document.querySelector('[data-action="decrement"]'),
 };
 
-refs.incrementBtn.addEventListener('click', increment);
-refs.decrementBtn.addEventListener('click', decrement);
+refs.incrementBtn.addEventListener('click', onIncrementClick);
+refs.decrementBtn.addEventListener('click', onDecrementClick);
 
 let counterValue = 0;
 
-function increment() {
+function onIncrementClick() {
   counterValue += 1;
   refs.textValue.textContent = counterValue;
 }
 
-function decrement() {
+function onDecrementClick() {
   counterValue -= 1;
   refs.textValue.textContent = counterValue;
 }
